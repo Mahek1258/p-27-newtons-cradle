@@ -1,4 +1,4 @@
-class Ground {
+class Roof {
     constructor() {
       var options = {
           'isStatic':true,
@@ -6,8 +6,8 @@ class Ground {
           'friction':1.0,
           'density':1.0
       }
-      this.body = Bodies.rectangle(400,700,800,20, options);
-      this.width = 800;
+      this.body = Bodies.rectangle(400,150,400,20, options);
+      this.width = 400;
       this.height = 20;
       
       World.add(world, this.body);
