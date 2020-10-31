@@ -15,7 +15,7 @@ class Bob{
       push();
       translate(pos.x, pos.y);
       ellipseMode(this.radius);
-      fill("white");
+      fill("pink");
       ellipse(0, 0, this.radius,this.radius);
       pop();
     }

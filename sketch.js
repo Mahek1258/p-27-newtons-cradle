@@ -30,16 +30,20 @@ function setup() {
 
 	roof = new Roof();
 
-	MRope = new Rope(bob3 , roof , 400 , 150);
+	MRope = new Rope(bob3.body , roof.body , 400 , 150);
+	MR1Rope = new Rope(bob2.body , roof.body , 330 , 150);
+	MR2Rope = new Rope(bob1.body , roof.body , 260 , 150);
+	ML1Rope = new Rope(bob4.body , roof.body , 470 , 150);
+	ML2Rope = new Rope(bob5.body , roof.body , 540 , 150);
 
 	Engine.run(engine);
   
 }
 
-
+console.log(Rope)
 function draw() {
 	Engine.update(engine);
-  background(0);
+  background("white");
   
   bob1.display();
   bob2.display();
@@ -48,6 +52,11 @@ function draw() {
   bob5.display();
 
   roof.display();
+  MRope.display();
+  MR1Rope.display();
+  MR2Rope.display();
+  ML1Rope.display();
+  ML2Rope.display();
 }
 
 
