@@ -22,19 +22,19 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	bob1 = new Bob(200,200);
-	bob2 = new Bob(270,200);
-	bob3 = new Bob(340,200);
-	bob4 = new Bob(410,200);
-	bob5 = new Bob(480,200);
+	bob1 = new Bob(200,400);
+	bob2 = new Bob(270,400);
+	bob3 = new Bob(340,400);
+	bob4 = new Bob(410,400);
+	bob5 = new Bob(480,400);
 
 	roof = new Roof();
 
-	MRope = new Rope(bob3.body , roof.body , 400 , 150);
-	MR1Rope = new Rope(bob2.body , roof.body , 330 , 150);
-	MR2Rope = new Rope(bob1.body , roof.body , 260 , 150);
-	ML1Rope = new Rope(bob4.body , roof.body , 470 , 150);
-	ML2Rope = new Rope(bob5.body , roof.body , 540 , 150);
+	MRope = new Rope(bob1.body , roof.body , -140 , 0);
+	MR1Rope = new Rope(bob2.body , roof.body , -70 , 0);
+	MR2Rope = new Rope(bob3.body , roof.body , 0 , 0);
+	ML1Rope = new Rope(bob4.body , roof.body , 70 , 0);
+	ML2Rope = new Rope(bob5.body , roof.body , 140 , 0);
 
 	Engine.run(engine);
   
@@ -57,7 +57,13 @@ function draw() {
   MR2Rope.display();
   ML1Rope.display();
   ML2Rope.display();
-}
 
+}
+function keyPressed(){
+	if(keyCode === UP_ARROW){
+		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-67,y:-64});
+	}
+	
+}
 
 
